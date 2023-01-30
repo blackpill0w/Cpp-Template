@@ -1,5 +1,5 @@
-# Ray Casting
-SFML template for C++17.
+# Cpp-Template
+C++17 template.
 # Dependenies
 - [cmake](https://cmake.org)
 # Build
