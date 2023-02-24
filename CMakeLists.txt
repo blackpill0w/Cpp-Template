@@ -41,6 +41,31 @@ if (NOT SFML_FOUND)
    FetchContent_MakeAvailable(SFML)
 endif()
 
+# JsonCpp
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(JSONCPP jsoncpp)
+if (NOT JSONCPP_FOUND)
+   include(FetchContent)
+   FetchContent_Declare(
+      JSONCPP
+      GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
+      GIT_TAG 1.9.5
+   )
+   FetchContent_MakeAvailable(JSONCPP)
+endif()
+
+# sdplog
+find_package(spdlog)
+if (NOT sdplog_FOUND)
+   include(FetchContent)
+   FetchContent_Declare(
+      sdplog
+      GIT_REPOSITORY https://github.com/gabime/spdlog.git
+      GIT_TAG v1.11.0
+   )
+   FetchContent_MakeAvailable(sdplog)
+endif()
+
 add_executable(app
    src/main.cpp)
 target_link_libraries(app
