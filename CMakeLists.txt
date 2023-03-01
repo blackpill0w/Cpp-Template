@@ -56,14 +56,14 @@ endif()
 
 # sdplog
 find_package(spdlog)
-if (NOT sdplog_FOUND)
+if (NOT spdlog_FOUND)
    include(FetchContent)
    FetchContent_Declare(
       sdplog
       GIT_REPOSITORY https://github.com/gabime/spdlog.git
       GIT_TAG v1.11.0
    )
-   FetchContent_MakeAvailable(sdplog)
+   FetchContent_MakeAvailable(spdlog)
 endif()
 
 add_executable(app
