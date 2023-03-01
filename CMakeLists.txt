@@ -59,7 +59,7 @@ find_package(spdlog)
 if (NOT spdlog_FOUND)
    include(FetchContent)
    FetchContent_Declare(
-      sdplog
+      spdlog
       GIT_REPOSITORY https://github.com/gabime/spdlog.git
       GIT_TAG v1.11.0
    )
