@@ -1,6 +1,7 @@
 # Cpp-Template
 C++17 template.
 # Dependenies
+Cmake will try to download & compile them, but I am not very good with it, so it might fail :)
 - [cmake](https://cmake.org)
 # Build
 Run this from the root directory of the project.
