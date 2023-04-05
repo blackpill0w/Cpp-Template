@@ -1,5 +1,5 @@
 # Cpp-Template
-C++17 template.
+C++20 template.
 # Dependenies
 Cmake will try to download & compile them, but I am not very good with it, so it might fail :)
 - [cmake](https://cmake.org)
