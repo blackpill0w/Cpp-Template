@@ -7,9 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wfloat-conversion -Wsign-conversion -Wshadow")
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-# Copy root/build/compile_commands.json to root/
-FILE(COPY ${CMAKE_BINARY_DIR}/compile_commands.json
-DESTINATION ${CMAKE_HOME_DIRECTORY})
 
 #fmt
 find_package(fmt)
@@ -79,3 +76,8 @@ target_link_libraries(app
    raylib
    fmt
 )
+
+# Copy root/build/compile_commands.json to root/
+if (EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
+   FILE(COPY ${CMAKE_BINARY_DIR}/compile_commands.json DESTINATION ${CMAKE_HOME_DIRECTORY})
+endif()
