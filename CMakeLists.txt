@@ -42,6 +42,9 @@ if (NOT SFML_FOUND)
 endif()
 
 # JsonCpp
+set(JSONCPP_WITH_POST_BUILD_UNITTEST OFF)
+set(JSONCPP_WITH_POST_BUILD_UNITTEST OFF)
+set(JSONCPP_WITH_TESTS OFF)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(JSONCPP jsoncpp)
 if (NOT JSONCPP_FOUND)
