@@ -11,6 +11,8 @@ int main() {
       while (win.pollEvent(e)) {
          if (e.type == sf::Event::Closed) win.close();
       }
+      win.clear();
+      win.display();
    }
 
    InitWindow(600, 600, "Raylib");
