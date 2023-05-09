@@ -72,6 +72,7 @@ target_link_libraries(app
    sfml-window sfml-graphics OpenGL
    raylib
    fmt
+   jsoncpp_lib
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
