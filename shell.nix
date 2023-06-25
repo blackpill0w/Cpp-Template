@@ -1,6 +1,6 @@
 with import <nixpkgs> {};
   stdenv.mkDerivation {
-    name = "music-indexer";
+    name = "cpp";
     hardeningDisable = [ "all" ];
     nativeBuildInputs = with pkgs; [
       pkg-config
