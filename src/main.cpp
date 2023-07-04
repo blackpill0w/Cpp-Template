@@ -24,5 +24,5 @@ int main() {
    }
    CloseWindow();
 
-   fmt::print(fg(fmt::color::green) | fmt::emphasis::bold, "Hello world!\n");
+   fmt::print(fg(fmt::color::light_green) | fmt::emphasis::bold, "Hello world!\n");
 }
