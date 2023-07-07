@@ -3,26 +3,25 @@
 #include <fmt/color.h>
 
 int main() {
-   sf::Window win{ sf::VideoMode(600, 600), "SFML" };
+  sf::Window win{sf::VideoMode(600, 600), "SFML\n"};
 
-   while (win.isOpen())
-   {
-      sf::Event e;
-      while (win.pollEvent(e)) {
-         if (e.type == sf::Event::Closed) win.close();
-      }
-      win.clear();
-      win.display();
-   }
+  while (win.isOpen()) {
+    sf::Event e;
+    while (win.pollEvent(e)) {
+      if (e.type == sf::Event::Closed)
+        win.close();
+    }
+    win.clear();
+    win.display();
+  }
 
-   InitWindow(600, 600, "Raylib");
-   while (!WindowShouldClose())
-   {
-      BeginDrawing();
-      ClearBackground(GRAY);
-      EndDrawing();
-   }
-   CloseWindow();
+  InitWindow(600, 600, "Raylib");
+  while (!WindowShouldClose()) {
+    BeginDrawing();
+    ClearBackground(GRAY);
+    EndDrawing();
+  }
+  CloseWindow();
 
-   fmt::print(fg(fmt::color::light_green) | fmt::emphasis::bold, "Hello world!\n");
+  fmt::print(fg(fmt::color::light_green) | fmt::emphasis::bold, "Hello world!\n");
 }
