@@ -4,17 +4,17 @@ project(app CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra
-					-Wfloat-conversion -Wsign-conversion
-					-Wshadow -Wduplicated-cond
-					-Wduplicated-branches -Wlogical-op
-					-Wnull-dereference -Wuseless-cast
-					-Wjump-misses-init -Wformat=2")
+                    -Wfloat-conversion -Wsign-conversion
+                    -Wshadow -Wduplicated-cond
+                    -Wduplicated-branches -Wlogical-op
+                    -Wnull-dereference -Wuseless-cast
+                    -Wjump-misses-init -Wformat=2")
 
 option(BUILD_WITH_NIX "Whether to build with nix" ON)
 
 #fmt
 find_package(fmt)
-if ((NOT fmt_FOUND) AND (NOT BUILD_WITH_NIX)) 
+if ((NOT fmt_FOUND) AND (NOT BUILD_WITH_NIX))
    include(FetchContent)
    FetchContent_Declare(
       fmt
