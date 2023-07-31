@@ -3,12 +3,14 @@ project(app CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra
-                    -Wfloat-conversion -Wsign-conversion
-                    -Wshadow -Wduplicated-cond
-                    -Wduplicated-branches -Wlogical-op
-                    -Wnull-dereference -Wuseless-cast
-                    -Wjump-misses-init -Wformat=2")
+string(CONCAT CMAKE_CXX_FLAGS
+             "${CMAKE_CXX_FLAGS}"
+             " -Wall -Wextra"
+             " -Wfloat-conversion -Wsign-conversion"
+             " -Wshadow -Wduplicated-cond"
+             " -Wduplicated-branches -Wlogical-op"
+             " -Wnull-dereference -Wuseless-cast"
+             " -Wformat=2")
 
 option(BUILD_WITH_NIX "Whether to build with nix" ON)
 
@@ -82,11 +84,11 @@ target_link_libraries(app
    sfml-window sfml-graphics OpenGL
    raylib
    fmt
-   jsoncpp_lib
+   jsoncpp
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-# Copy root/build/compile_commands.json to root/
+# Copy root/build/compile_commands.json to the root directory of the project
 if (EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
    FILE(COPY ${CMAKE_BINARY_DIR}/compile_commands.json DESTINATION ${CMAKE_HOME_DIRECTORY})
 endif()
