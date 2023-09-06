@@ -10,4 +10,4 @@ mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_WITH_NIX=OFF
 ```
 ## Note
 If you have [nix](https://github.com/NixOS/nix) installed remove the `-DBUILD_WITH_NIX=OFF` option
-and run `nix-shell` or `nix develop` (dependy on whether you're using regular nix shell or flakes) before running cmake.
+and run `nix-shell` or `nix develop` (depending on whether you're using regular nix shell or flakes) before running cmake.
