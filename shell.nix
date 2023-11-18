@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
   stdenv.mkDerivation {
     name = "cpp";
-    hardeningDisable = [ "all" ];
+    #hardeningDisable = [ "all" ];
     nativeBuildInputs = with pkgs; [
       pkg-config
       gcc
