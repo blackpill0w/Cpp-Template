@@ -4,13 +4,15 @@ project(app CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 string(CONCAT CMAKE_CXX_FLAGS
-             "${CMAKE_CXX_FLAGS}"
-             " -static -Wall -Wextra"
-             " -Wfloat-conversion -Wsign-conversion"
-             " -Wshadow -Wduplicated-cond"
-             " -Wduplicated-branches -Wlogical-op"
-             " -Wnull-dereference -Wuseless-cast"
-             " -Wformat=2")
+  "${CMAKE_CXX_FLAGS}"
+  " -static -Wall -Wextra"
+  " -Wfloat-conversion -Wsign-conversion"
+  " -Wshadow -Wduplicated-cond"
+  " -Wduplicated-branches -Wlogical-op"
+  " -Wnull-dereference -Wuseless-cast"
+  " -Wformat=2 -Wformat-security")
+
+set(BUILD_SHARED_LIBS OFF)
 
 # JsonCpp
 set(JSONCPP_WITH_POST_BUILD_UNITTEST OFF)
