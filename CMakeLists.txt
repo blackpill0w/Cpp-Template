@@ -20,12 +20,12 @@ set(JSONCPP_WITH_POST_BUILD_UNITTEST OFF)
 set(JSONCPP_WITH_TESTS OFF)
 
 add_executable(app
-   src/main.cpp)
+  src/main.cpp)
 target_link_libraries(app
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Copy root/build/compile_commands.json to the root directory of the project
 if (EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
-   FILE(COPY ${CMAKE_BINARY_DIR}/compile_commands.json DESTINATION ${CMAKE_HOME_DIRECTORY})
+  FILE(COPY ${CMAKE_BINARY_DIR}/compile_commands.json DESTINATION ${CMAKE_HOME_DIRECTORY})
 endif()
