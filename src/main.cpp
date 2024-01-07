@@ -1,27 +1,3 @@
-#include <SFML/Window.hpp>
-#include <raylib.h>
-#include <fmt/color.h>
+#include <iostream>
 
-int main() {
-  sf::Window win{sf::VideoMode(600, 600), "SFML\n"};
-
-  while (win.isOpen()) {
-    sf::Event e;
-    while (win.pollEvent(e)) {
-      if (e.type == sf::Event::Closed)
-        win.close();
-    }
-    win.clear();
-    win.display();
-  }
-
-  InitWindow(600, 600, "Raylib");
-  while (!WindowShouldClose()) {
-    BeginDrawing();
-    ClearBackground(GRAY);
-    EndDrawing();
-  }
-  CloseWindow();
-
-  fmt::print(fg(fmt::color::light_green) | fmt::emphasis::bold, "Hello world!\n");
-}
+int main() { std::cout << "Hello, World!\n"; }
