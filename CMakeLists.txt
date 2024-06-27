@@ -14,6 +14,7 @@ string(CONCAT CMAKE_CXX_FLAGS
   " -Wformat=2 -Wformat-security")
 
 set(BUILD_SHARED_LIBS OFF)
+set(BUILD_TESTING OFF)
 
 # JsonCpp
 set(JSONCPP_WITH_POST_BUILD_UNITTEST OFF)
@@ -26,7 +27,3 @@ target_link_libraries(app
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-# Copy root/build/compile_commands.json to the root directory of the project
-if (EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
-  FILE(COPY ${CMAKE_BINARY_DIR}/compile_commands.json DESTINATION ${CMAKE_HOME_DIRECTORY})
-endif()
